@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- link to style sheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="skill.css">
+    <link rel="stylesheet" href="learnmorebtn.css">
+    <!-- GOOGLE fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap" rel="stylesheet">
+    <!-- Link to Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+    <title>Mars Alexis Regidor GIS Portfolio</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Home</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <!-- <li><a href="#">Gallery</a></li> -->
+                    <li><a href="projects/files/mycv2026.pdf">Resume</a></li>
+                    <li><a href="https://github.com/bruskomars?tab=repositories">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/marsregidor/">Linkedin</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+    <div class="header">
+        <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+        </div>
+      </div>
+    <section class="home">
+        <div class="name">
+			<h1 class="box">
+				Mars Alexis Regidor
+            </h1>
+            <p class="box2">GIS Specialist</p>
+            <svg class="arrows">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
+         </div>
+         
+    </section>
+    
+    <div>
+				<p class="myP">
+				About me
+			</p>
+    </div>
+    <div class="photoback">
+        <img class="photo" src="images/portfolio.jpg">
+    </div>
+    <div>
+        <p class="aboutMe">
+            Hi, I'm Mars Regidor, a GIS Specialist passionate about spatial data, mapping technologies, and data-driven problem solving. With experience in GIS analysis, Python automation, SQL/PostGIS, and web GIS development, I build solutions that turn complex geographic information into actionable insights. Whether it's performing spatial analysis or automating geospatial workflows, I enjoy creating tools that help people better understand and use location-based data.
+            </p>
+    </div>
+
+<!-- SKILLS -->
+
+<div>
+    <p class="myP myP2">
+    Skills
+</p>
+</div>
+<div class="skill_col">
+<div class="skill_col_1">
+    <p class="coll">GIS Analysis Softwares</p>
+    <ul class="skills-bar-container">
+        <li>
+        <div class="progressbar-title">
+            <h3>ArcGIS</h3>
+            <!-- <span class="percent" id="arcgis-pourcent"></span> -->
+        </div>
+        <div class="bar-container">
+            <span class="progressbar progressred" id="progress-arcgis"></span>
+        </div>
+        </li>
+        <li>
+        <div class="progressbar-title">
+            <h3>QGIS</h3>
+            <!-- <span class="percent" id="qgis-pourcent"></span> -->
+        </div>
+        <div class="bar-container">
+            <span class="progressbar progressblue" id="progress-qgis"></span>
+        </div>
+        </li>
+        
+        <!--
+        <li>
+        <div class="progressbar-title">
+            <h3>R</h3>
+             <span class="percent" id="R-pourcent"></span> 
+        </div>
+        <div class="bar-container">
+            <span class="progressbar progresspurple" id="progress-R"></span>
+        </div>
+        </li>
+        -->
+        
+        <li>
+        <div class="progressbar-title">
+            <h3>Python</h3>
+            <!-- <span class="percent" id="python-pourcent"></span> -->
+        </div>
+        <div class="bar-container">
+            <span class="progressbar progressorange" id="progress-python"></span>
+        </div>
+        </li>
+        <li>
+            <div class="progressbar-title">
+                <h3>SQL</h3>
+                <!-- <span class="percent" id="SQL-pourcent"></span> -->
+            </div>
+            <div class="bar-container">
+                <span class="progressbar progressgreen" id="progress-SQL"></span>
+            </div>
+            </li>
+    </ul>
+    </div>
+    <div class="skill_col_2">
+        <p class="coll">Web GIS Development</p>
+        <ul class="skills-bar-container">
+        <li>
+        <div class="progressbar-title">
+            <h3>HTML5 / CSS</h3>
+            <!-- <span class="percent" id="html-pourcent"></span> -->
+        </div>
+        <div class="bar-container">
+            <span class="progressbar progressred" id="progress-html"></span>
+        </div>
+        </li>
+        <li>
+        <div class="progressbar-title">
+            <h3>JavaScript</h3>
+            <!-- <span class="percent" id="javascript-pourcent"></span> -->
+        </div>
+        <div class="bar-container">
+            <span class="progressbar progressblue" id="progress-javascript"></span>
+        </div>
+        </li>
+        
+        <!--
+        <li>
+        <div class="progressbar-title">
+            <h3>OpenLayers</h3>
+             <span class="percent" id="openlayers-pourcent"></span> 
+        </div>
+        <div class="bar-container">
+            <span class="progressbar progresspurple" id="progress-openlayers"></span>
+        </div>
+        </li>
+        -->
+        
+        <li>
+        <div class="progressbar-title">
+            <h3>Leaflet</h3>
+            <!-- <span class="percent" id="leaflet-pourcent"></span> -->
+        </div>
+        <div class="bar-container">
+            <span class="progressbar progressorange" id="progress-leaflet"></span>
+        </div>
+        </li>
+        
+        <!--
+        <li>
+            <div class="progressbar-title">
+                  <h3>Mapbox</h3>
+                  <span class="percent" id="mapbox-pourcent"></span> 
+              </div>
+             <div class="bar-container">
+                   <span class="progressbar progressgreen" id="progress-mapbox"></span>
+             </div>
+             
+        <li>
+        -->
+        
+        <li>
+        <div class="progressbar-title">
+            <h3>GeoServer</h3>
+            <!-- <span class="percent" id="geoserver-pourcent"></span> -->
+        </div>
+        <div class="bar-container">
+            <span class="progressbar progressorangered" id="progress-geoserver"></span>
+        </div>
+        </li>
+
+        <li>
+            <div class="progressbar-title">
+                <h3>PostGIS / PostGre SQL</h3>
+                <!-- <span class="percent" id="postgis-pourcent"></span> -->
+            </div>
+            <div class="bar-container">
+                <span class="progressbar progresspink" id="progress-postgis"></span>
+            </div>
+            </li>
+
+       
+        
+    </ul>
+
+
+
+</div>
+<div class="skill_col_3">
+    <p class="coll">GIS Skills</p>
+    <ul class="skills-bar-container">
+    <li>
+    <div class="progressbar-title">
+        <h3>Spatial Analysis</h3>
+        <!-- <span class="percent" id="creativity-pourcent"></span> -->
+    </div>
+    <div class="bar-container">
+        <span class="progressbar progressred" id="progress-creativity"></span>
+    </div>
+    </li>
+    <li>
+    <div class="progressbar-title">
+        <h3>Digitization</h3>
+        <!-- <span class="percent" id="motivation-pourcent"></span> -->
+    </div>
+    <div class="bar-container">
+        <span class="progressbar progressblue" id="progress-motivation"></span>
+    </div>
+    </li>
+    
+    <!--
+    <li>
+    <div class="progressbar-title">
+        <h3>Vectorization</h3>
+         <span class="percent" id="vector-pourcent"></span> 
+    </div>
+    <div class="bar-container">
+        <span class="progressbar progresspurple" id="progress-vector"></span>
+    </div>
+    </li>
+    -->
+    
+    <li>
+    <div class="progressbar-title">
+        <h3>Manipulate Complex Datasets</h3>
+        <!-- <span class="percent" id="dataset-pourcent"></span> -->
+    </div>
+    <div class="bar-container">
+        <span class="progressbar progressorange" id="progress-dataset"></span>
+    </div>
+    </li>
+    
+    <li>
+    <div class="progressbar-title">
+        <h3>Detail-Oriented</h3>
+        <!-- <span class="percent" id="detail-pourcent"></span> -->
+    </div>
+    <div class="bar-container">
+        <span class="progressbar progressgreen" id="progress-detail"></span>
+    </div>
+    </li>
+    <li>
+        <div class="progressbar-title">
+            <h3>Problem-Solving</h3>
+            <!-- <span class="percent" id="problem-pourcent"></span> -->
+        </div>
+        <div class="bar-container">
+            <span class="progressbar progressorangered" id="progress-problem"></span>
+        </div>
+        </li>
+</ul>
+</div>
+</div>
+<!-- SKILLS END-->
+
+<!-- Education -->
+<div>
+    <p class="myP myP3">
+    Education Background
+    </p>
+</div>
+
+<div class="experiencecol">
+    <div class="exp eduexp">
+        <p class=" expbox "><a href="https://uplb.edu.ph">
+            <img class="company_logo" title="The official site of UPLB" src="images/uplb.png" alt="Logo UPLB""></a><br>
+            <span class="exptitle schoolname" >University of the Philippines Los Baños </span><span class="expnote"><br> 
+                <span style="font-weight: bold;color:rgba(234, 252, 156, 0.979); background-color:rgba(73, 84, 90, 0.274) ;text-align: center;border-radius: 25px;padding:10px 20px" class="deg">Bachelor's Degree</span><br>
+                <strong style="color:rgba(255, 174, 205, 0.979);">Bachelor of Science in Forestry Major in Geographic Information System</strong><br>  
+                June 2006 - Apr 2011<br>
+                Los Baños, Laguna</span><br></p>
+        
+    </div>
+
+    </div>
+</div>
+<!-- Education END -->
+<!--Experience -->
+<div>
+    <p class="myP myP3">
+    Working Experience
+    </p>
+</div>
+
+<div class="experiencecol">
+    <div class="exp">
+        <p class="expbox"><a href="https://accu-map.com">
+            <img class="company_logo" title="The official site of Accu-map" src="images/accumap.png" alt="Company logo of Accu-map"></a><br>
+            <span class="exptitle">Accu-map </span><span class="expnote"><br> 
+                <strong style="color:rgba(234, 252, 156, 0.979)">GIS Specialist / Team Lead</strong><br> 
+                2016 Nov - Present<br>
+                Greenhills, Mandaluyong City</span><br>
+        <span class="expskill">QGIS, Python, ArcGIS Desktop, Excel, Postgres/Postgis</span>
+        
+        <p class="expdes"> • Analyzed large geospatial and tabular datasets using SQL and Python, generating 
+            insights that informed strategic and operational decisions.
+            <br>• Automated data validation and geospatial workflows using Python, improving efficiency by 20%.
+            <br>• Developed and maintained GIS databases, ensuring data accuracy, consistency, and integrity.
+            <br>• Collaborated with cross-functional teams to integrate GIS solutions into business processes.
+            <br>• Improved data infrastructure by optimizing spatial databases and developing automated data pipelines, ensuring consistency and scalability.
+            </p>
+    </div>
+
+    <div class="exp">
+        <p class="expbox"><a href="https://precision-design-solutions.com">
+            <img class="company_logo" title="Official website of Precision Design Solutions" src="images/pds.jpg" alt="Company logo of precision design solutions"></a><br>
+            <span class="exptitle title3"></span>Precision Design Solutions </span><span class="expnote"><br> 
+                <strong style="color:rgba(234, 252, 156, 0.979)">GIS Technician</strong><br>  
+                Sep 2025 - Mar 2026<br>
+        <span class="expskill">Python, Postgres, QGIS, 3GIS</span>
+        
+        <p class="expdes">• Reviews and interprets data sources and uses basic GIS software functions to
+            enter, edit, and update GIS spatial and attribute data into databases or layers,
+            following standard procedures
+            <br>• Interprets and transforms external data to fit internal database formatting and requirements.
+            <br>• Defines GIS product needs per request, works with supervisor or requestor to ensure compliance with identified needs.
+            <br>• Maintain GIS databases and metadata to ensure data accuracy, completeness, and accessibility.
+            <br>• Develops and maintains links between various databases.
+            <br>• Participate in quality assurance and quality control activities to ensure accuracy, completeness, and consistency of GIS data and deliverables.
+            </p>
+        </div>
+    </div>
+
+    <div class="exp">
+        <p class="expbox"><a href="">
+            <img class="company_logo" title="" src="images/asiatype.jpg" alt="Company logo of Asiatype, Inc."></a><br>
+            <span class="exptitle">Asiatype, Inc. </span><span class="expnote"><br> 
+                <strong style="color:rgba(234, 252, 156, 0.979)">GIS Specialist</strong><br>  
+                Nov 2011 - Nov 2016<br>
+                Greenhills, Mandaluyong City</span><br>
+        <span class="expskill">QGIS, ArcGIS Desktop, Excel, Field Survey</span>
+        
+        <p class="expdes">• Designed and developed interactive digital maps and data visualizations by integrating multiple datasets.
+            <br>• Performed quality assurance checks to ensure accuracy, consistency, and integrity of GIS and tabular data.
+            <br>• Extracted, transformed, and analyzed large datasets using Python and mapping software to identify trends and support reporting needs. 
+            <br>• Field survey and data collection using GPS devices, ensuring accurate and up-to-date geospatial information for mapping and analysis purposes.
+            </p>
+        </div>
+    </div>
+    
+</div>
+<!--Experience END-->
+
+<!-- Projects -->
+
+<div>
+    <p class="myP myP4">
+    Projects
+    </p>
+    
+</div>
+<div class="projectgrid">
+<div class="row row-cols-2 row-cols-md-5 g-4">
+
+    <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">GIS Analysis <br> </h5>
+        <!-- <h5 class="card-title" style="color:aqua;font-size:2rem">Sep 2022 - Apr 2023 <br> </h5> -->
+        <div class="card border-light text-light bg-dark">
+          <img src="images/project1-rta1.png" class="card-img-top" alt="project1_pic">
+          <div class="card-body">
+            <h5 class="card-title">Delivery System</h5>
+            <p class="card-text">The Real-Time Delivery Area (RTA) and Branch Assignment System is a GIS-based solution designed to automatically identify the appropriate store branch and estimated delivery time based on a customer's location.
+Using service area polygons generated from a road network, the system determines which delivery zone contains the customer address and assigns the corresponding store branch responsible for fulfilling the order.
+This solution supports location-based decision-making and helps improve delivery efficiency by automating branch selection and delivery time estimation.</p>
+            <div class="learnmore">
+                <a href="projects/project1.html">
+                <button class="shrink-border">Learn More</button>
+            </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">Land Use Mapping <br> </h5>
+        <!-- <h5 class="card-title" style="color:aqua;font-size:2rem">Apr 2023 - May 2023<br> </h5> -->
+        <div class="card  border-light text-light bg-dark">
+          <img src="images/landuse1.png" class="card-img-top" alt="project2_pic">
+          <div class="card-body">
+            <h5 class="card-title"> Land Use Digitization and Georeferencing</h5>
+            <p class="card-text">Georeferenced and digitized land use planning maps using GIS technologies and a specialized digitization platform. Converted non-spatial planning documents into structured GIS datasets by interpreting zoning classifications, creating polygon features, assigning land use attributes, and performing quality assurance checks to ensure spatial accuracy and data integrity.</p>
+            <div class="learnmore">
+                <a href="projects/project2.html">
+                <button class="shrink-border">Learn More</button>
+            </a>
+            </div>
+          </div>
+        </div>
+    </div>
+        
+    <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">Fiber Network Mapping <br> </h5>
+        <!-- <h5 class="card-title" style="color:aqua;font-size:2rem">Apr 2023<br> </h5> -->
+        <div class="card  border-light text-light bg-dark">
+          <img src="images/fiber.PNG" class="card-img-top" alt="project3_pic">
+          <div class="card-body">
+            <h5 class="card-title">Fiber Network Mapping and Infrastructure Management</h5>
+            <p class="card-text">This project involved the management, validation, and maintenance of telecommunications infrastructure data within a GIS environment. The work focused on mapping and maintaining fiber optic network assets, including poles, access points, network equipment, cabinets, service boundaries, and fiber cable routes.
+
+Using GIS tools, network components were spatially validated, updated, and organized to support network planning, construction, quality control, and operational decision-making.
+
+The project required extensive feature editing, spatial data management, and topology validation to ensure the accuracy and integrity of network assets. GIS workflows were utilized to analyze asset connectivity, verify spatial relationships, and maintain consistency across multiple infrastructure layers.</p>
+            <div class="learnmore">
+                <a href="projects/project3.html">
+                <button class="shrink-border">Learn More</button>
+            </a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="w-100"></div>
+    <!-- ROW 2 -->
+    <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">GIS Analysis <br> </h5>
+        <!-- <h5 class="card-title" style="color:aqua;font-size:2rem">Mar 2023 <br> </h5> -->
+        <div class="card border-light text-light bg-dark">
+          <img src="images/landcover.png" class="card-img-top" alt="project4_pic">
+          <div class="card-body">
+            <h5 class="card-title">Philippine Land Cover Dynamics</h5>
+            <p class="card-text">This project focuses on the advanced cartographic design and visual communication of macro-level environmental datasets across the Philippine archipelago. Transforming complex vector data into a high-fidelity visual asset. By prioritizing visual hierarchy, custom color theory, the final outputs translate dense spatial attributes into clear, actionable insights regarding urban sprawl, agricultural boundaries, and critical conservation zones.
+
+Using GIS tools, network components were spatially validated, updated, and organized to support network planning, construction, quality control, and operational decision-making.</p>
+            
+          </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">QGIS Plugin <br> </h5>
+        <!-- <h5 class="card-title" style="color:aqua;font-size:2rem">Jan 2023<br> </h5> -->
+        <div class="card border-light text-light bg-dark">
+          <img src="images/qc.png" class="card-img-top" alt="project2_pic">
+          <div class="card-body">
+            <h5 class="card-title"> QGIS QC Tool: Automated Geospatial Data Specification & Topology Validator</h5>
+            <p class="card-text">
+                To eliminate manual verification bottlenecks and ensure strict data compliance, I developed a custom QGIS Python plugin that automates geospatial Quality Control (QC) pipelines. The tool serves as an interactive data-validation suite, enabling GIS teams to rapidly cross-reference vector datasets against official data specifications, validate schema attributes, and execute automated topological containment and link verification checks.</p>
+            
+          </div>
+        </div>
+    </div>
+    <!-- <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">Spatial Analysis <br> </h5>
+        <h5 class="card-title" style="color:aqua;font-size:2rem">Feb 2023<br> </h5>
+        <div class="card border-light text-light bg-dark">
+          <img src="images/popdense.png" class="card-img-top" alt="project3_pic">
+          <div class="card-body">
+            <h5 class="card-title"> Urban Population Density Mapping</h5>
+            <p class="card-text">
+                This project involved the analysis and visualization of population density patterns across Metro Manila using GIS techniques and demographic datasets. The objective was to identify areas of high population concentration and understand spatial distribution trends that can support urban planning, infrastructure development, and public service allocation.
+                Population density values were calculated, classified, and visualized using a choropleth mapping approach to highlight variations in residential concentration across different neighborhoods and administrative areas.
+                The resulting map provides insights into urban growth patterns, population hotspots, and areas that may require additional infrastructure and community services.</p>
+          </div>
+        </div>
+    </div> -->
+      <div class="w-100"></div>
+
+    <!-- ROW 3 -->
+      <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">Spatial Data Management <br> </h5>
+        <!-- <h5 class="card-title" style="color:aqua;font-size:2rem">Feb 2023 <br> </h5> -->
+        <div class="card border-light text-light bg-dark">
+          <img src="images/postgis.png" class="card-img-top" alt="project1_pic">
+          <div class="card-body">
+            <h5 class="card-title"> Enterprise Geographic Database Management</h5>
+            <p class="card-text">Managed and maintained enterprise geospatial databases containing roads, addresses, landmarks, public areas, land cover, and administrative boundaries. Performed spatial data validation, feature updates, QA/QC workflows, and database maintenance using PostgreSQL/PostGIS and QGIS to support mapping and location-based services.
+
+Designed and optimized spatial database structures, including data organization, attribute management, and geometry validation to ensure data accuracy and consistency. Utilized SQL queries and PostGIS spatial functions for data extraction, analysis, troubleshooting, and maintaining high-quality geospatial datasets.</p>
+            
+          </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">Spatial Analysis <br> </h5>
+        <!-- <h5 class="card-title" style="color:aqua;font-size:2rem">Feb 2023<br> </h5> -->
+        <div class="card border-light text-light bg-dark">
+          <img src="images/popdense.png" class="card-img-top" alt="project3_pic">
+          <div class="card-body">
+            <h5 class="card-title"> Urban Population Density Mapping</h5>
+            <p class="card-text">
+                This project involved the analysis and visualization of population density patterns across Metro Manila using GIS techniques and demographic datasets. The objective was to identify areas of high population concentration and understand spatial distribution trends that can support urban planning, infrastructure development, and public service allocation.
+
+Population density values were calculated, classified, and visualized using a choropleth mapping approach to highlight variations in residential concentration across different neighborhoods and administrative areas.
+
+The resulting map provides insights into urban growth patterns, population hotspots, and areas that may require additional infrastructure and community services.</p>
+            
+          </div>
+        </div>
+    </div>
+    <!-- <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">GIS Analysis <br> </h5>
+        <h5 class="card-title" style="color:aqua;font-size:2rem">Dec 2022<br> </h5>
+        <div class="card border-light text-light bg-dark">
+          <img src="images/project9.png" class="card-img-top" alt="project3_pic">
+          <div class="card-body">
+            <h5 class="card-title"> Fire Burn Severity and Vegetation Recovery in the Prouton Lakes Fire</h5>
+            <p class="card-text">
+                This project used R to analyze the fire burn severity and post-fire vegetation recovery of the Prouton Lakes fire using Landsat time-series data. It quantified burn severity, calculated vegetation indices, created yearly composites, classified burn severity, and examined post-fire vegetation recovery. The results were visualized through figures and included analyzing historical fires in BC, creating NDVI composites, and comparing NDVI values per burn severity class.</p>
+            
+          </div>
+        </div> -->
+    </div>
+  </div>
+</div>
+<!-- Projects END -->
+<!-- thank -->
+<p class="aboutMe thank" style="color:rgb(153, 153, 153)">
+    <span class="heart"style="color:rgb(197, 58, 58);padding:5px"></span>  &copy;bruskomars |  Email : regidor.marsalexis@gmail.com  | Phone : +63 945-6183-043<br>
+    </p>
+<!-- Jquery needed -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="main.js"></script>
+<!-- Bootstrap 4 JS CDN -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+</body>
+</html>
