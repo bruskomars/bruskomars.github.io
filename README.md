@@ -206,4 +206,15 @@ Land use boundaries were digitized and classified according to official zoning c
 
 ---
 
+## Acknowledgements
+
+This portfolio website was inspired by and adapted from the work of Alan Wu.
+
+Original portfolio:
+https://alanrocks.github.io/portfolio/
+
+The design and structure have been customized to showcase my own GIS projects, skills, and professional experience.
+
+---
+
 Thank you for visiting my portfolio.
