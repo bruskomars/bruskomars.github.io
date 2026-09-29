@@ -4,3 +4,4 @@ djangorestframework-gis
 psycopg2-binary
 django-cors-headers
 gunicorn
+pytest-django
