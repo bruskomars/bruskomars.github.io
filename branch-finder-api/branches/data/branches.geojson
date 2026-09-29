@@ -1,8 +1,7 @@
 {
 "type": "FeatureCollection",
-"name": "store",
+"name": "branches",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"xy_coordinate_resolution": 1e-15,
 "features": [
 { "type": "Feature", "properties": { "BRANCH": "PGH TAFT", "RTA_ID": "JRTA1" }, "geometry": { "type": "Point", "coordinates": [ 120.98830357138084, 14.578437788000144 ] } },
 { "type": "Feature", "properties": { "BRANCH": "GEN T DE LEON", "RTA_ID": "JRTA2" }, "geometry": { "type": "Point", "coordinates": [ 121.000633876224853, 14.69105828800005 ] } },
@@ -109,11 +108,11 @@
 { "type": "Feature", "properties": { "BRANCH": "AMANG RODRIGUEZ", "RTA_ID": "JRTA71" }, "geometry": { "type": "Point", "coordinates": [ 121.097344235692802, 14.614033432735994 ] } },
 { "type": "Feature", "properties": { "BRANCH": "ZAPOTE", "RTA_ID": "JRTA92" }, "geometry": { "type": "Point", "coordinates": [ 120.97163722828715, 14.46220909750005 ] } },
 { "type": "Feature", "properties": { "BRANCH": "ST. FRANCIS", "RTA_ID": "JRTA76" }, "geometry": { "type": "Point", "coordinates": [ 121.057968955191427, 14.586110017764184 ] } },
-{ "type": "Feature", "properties": { "BRANCH": "ORTIGAS DE CASTRO", "RTA_ID": "JRTA18" }, "geometry": { "type": "Point", "coordinates": [ 121.099830396860611, 14.588882061437658 ] } },
+{ "type": "Feature", "properties": { "BRANCH": "ORTIGAS DE CASTRO", "RTA_ID": "JRTA19" }, "geometry": { "type": "Point", "coordinates": [ 121.099830396860611, 14.588882061437658 ] } },
 { "type": "Feature", "properties": { "BRANCH": "WILSON", "RTA_ID": "JRTA24" }, "geometry": { "type": "Point", "coordinates": [ 121.030390907230128, 14.602578679500226 ] } },
-{ "type": "Feature", "properties": { "BRANCH": "PASIG ROTUNDA", "RTA_ID": "JRTA236" }, "geometry": { "type": "Point", "coordinates": [ 121.073374813928737, 14.567647392500504 ] } },
+{ "type": "Feature", "properties": { "BRANCH": "PASIG ROTUNDA", "RTA_ID": "JRTA237" }, "geometry": { "type": "Point", "coordinates": [ 121.073374813928737, 14.567647392500504 ] } },
 { "type": "Feature", "properties": { "BRANCH": "QUIRINO BACLARAN", "RTA_ID": "JRTA162" }, "geometry": { "type": "Point", "coordinates": [ 120.997267678463942, 14.533574623500272 ] } },
 { "type": "Feature", "properties": { "BRANCH": "EXPORT BANK BUENDIA", "RTA_ID": "JRTA211" }, "geometry": { "type": "Point", "coordinates": [ 121.011654181605024, 14.569219212913396 ] } },
-{ "type": "Feature", "properties": { "BRANCH": "PRC", "RTA_ID": "JRTA81" }, "geometry": { "type": "Point", "coordinates": [ 121.024652656813458, 14.572199582712386 ] } }
+{ "type": "Feature", "properties": { "BRANCH": "PRC", "RTA_ID": "JRTA90" }, "geometry": { "type": "Point", "coordinates": [ 121.024652656813458, 14.572199582712386 ] } }
 ]
 }

@@ -4,7 +4,7 @@ from django.contrib.gis.geos import GEOSGeometry, MultiPolygon
 from django.db import transaction
 from branches.models import Branch, DeliveryZone
 
-BRANCH_FILE, ZONE_FILE = "data/branches.geojson", "data/rta.geojson"
+BRANCH_FILE, ZONE_FILE = "branches/data/branches.geojson", "branches/data/rta.geojson"
 BRANCH_CODE, BRANCH_NAME = "RTA_ID", "BRANCH"
 ZONE_BRANCH, ZONE_ETA = "RTA_ID", "TIME"
 
