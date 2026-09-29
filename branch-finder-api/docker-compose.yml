@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_DB: branchfinder
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes: [".:/app"]
+    ports: ["8000:8000"]
+    environment:
+      DB_NAME: branchfinder
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_HOST: db
+    depends_on: [db]
+volumes:
+  pgdata:
