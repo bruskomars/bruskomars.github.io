@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework_gis',
     'corsheaders',
     'branches',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -145,3 +146,14 @@ CORS_ALLOWED_ORIGINS = [
     "https://bruskomars.github.io",
     "http://localhost:8080",
 ]
+
+# for API Docs 
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Branch Finder API',
+    'DESCRIPTION': 'Assigns the correct branch and ETA for a given location, using PostGIS spatial queries against real-time delivery/service-area polygons.',
+    'VERSION': '1.0.0',
+}
