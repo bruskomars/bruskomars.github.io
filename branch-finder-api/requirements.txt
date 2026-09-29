@@ -6,3 +6,4 @@ django-cors-headers
 gunicorn
 pytest-django
 drf-spectacular
+dj-database-url
