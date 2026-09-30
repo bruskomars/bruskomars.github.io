@@ -27,6 +27,7 @@
 <div id="info">
   <h3>Branch Finder</h3>
   <p>Click anywhere on the map to find the assigned branch and delivery ETA.</p>
+  <p style="font-size: 12px; color: #888;">Coverage area: Metro Manila (Quezon City to Pasay). Clicks outside this area will show "no coverage."</p>
   <div id="result"></div>
 </div>
 
@@ -37,7 +38,7 @@
 <script>
 const API_BASE = "https://branch-finder-api-bf4d.onrender.com";
 
-const map = L.map('map').setView([14.5995, 120.9842], 11);
+const map = L.map('map').setView([14.58, 121.02], 12);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
