@@ -387,7 +387,7 @@
 <div class="row row-cols-2 row-cols-md-5 g-4">
 
     <div class="col">
-        <h5 class="card-title" style="color:beige;font-size:2.5rem">Interactive Demo <br> </h5>
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">Branch Finder Demo <br> </h5>
         <div class="card border-light text-light bg-dark">
           <img src="images/branch-finder-preview.PNG" class="card-img-top" alt="branch_finder_preview">
           <div class="card-body">
@@ -408,7 +408,28 @@
         </div>
     </div>
 
+     <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">Layer Search Demo</h5>
+        <div class="card border-light text-light bg-dark">
+          <img src="images/address-search-preview.png" class="card-img-top" alt="address_search_preview">
+          <div class="card-body">
+            <h5 class="card-title">NCR Layer Search Live<span class="badge-live">Live</span></h5>
+            <p class="card-text">Search Metro Manila by landmark, street, house number, barangay or city, and see matches on the map alongside a results table that zooms to each one. A Django REST API on PostGIS handles the fuzzy matching (trigram similarity) and spatial lookups such as point-in-polygon and nearest streets, and a Leaflet front end displays the results. Deployed end-to-end on Render with the database on Neon. <em>Coverage is limited to Metro Manila (NCR), and only part of the NCR data is loaded, so some addresses, streets and landmarks won't be found.</em></p>
+            <div class="learnmore">
+                <a href="https://geodjango-leaflet-search.onrender.com/maps/" target="_blank" rel="noopener">
+                    <button class="shrink-border">Try the Demo</button>
+                </a>
+                <!-- <a href="https://github.com/bruskomars/django-leaflet-search" target="_blank" rel="noopener">
+                    <button class="shrink-border">View Code</button>
+                </a> -->
+            </div>
+          </div>
+        </div>
+    </div>
+
 </div>
+
+ 
 </div>
 <!-- LIVE DEMOS END -->
 
