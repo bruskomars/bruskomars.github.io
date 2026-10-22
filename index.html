@@ -427,6 +427,134 @@
         </div>
     </div>
 
+    
+
+</div>
+<!-- data analysis -->
+<div class="row row-cols-2 row-cols-md-5 g-4">
+
+    <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">Barangay Insights Demo <br> </h5>
+        <div class="card border-light text-light bg-dark">
+          <img src="images/bgy_insights.png" class="card-img-top" alt="barangay_insights_preview">
+          <div class="card-body">
+            <h5 class="card-title">Barangay Insights <span class="badge-live">Live</span></h5>
+            <p class="card-text">An interactive choropleth of Metro Manila’s 1,716 barangays, shaded by landmark, house-number or road density, with a switchable measure, a legend and a top-10 ranking. The statistics are precomputed with PostGIS spatial joins and served as GeoJSON by a Django REST endpoint.</em></p>
+            <div class="learnmore">
+                <a href="https://geodjango-leaflet-search.onrender.com/maps/insights/" target="_blank">
+                <button class="shrink-border">Try the Demo</button>
+            <!-- </a>
+                <a href="https://github.com/bruskomars/bruskomars.github.io/tree/main/branch-finder-api" target="_blank">
+                <button class="shrink-border">View Code</button>
+            </a> -->
+                <a href="https://branch-finder-api-bf4d.onrender.com/api/docs/" target="_blank">
+        
+            </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">Radius Analysis Demo</h5>
+        <div class="card border-light text-light bg-dark">
+          <img src="images/radius.png" class="card-img-top" alt="radius_analysis_preview">
+          <div class="card-body">
+            <h5 class="card-title">Radius Analysis<span class="badge-live">Live</span></h5>
+            <p class="card-text">Click anywhere on the map and choose a radius to count the landmarks, house numbers and road length around that point, with the nearest landmarks and road length by street. Distances are true meters, using PostGIS geography buffers.</em></p>
+            <div class="learnmore">
+                <a href="https://geodjango-leaflet-search.onrender.com/maps/radius/" target="_blank" rel="noopener">
+                    <button class="shrink-border">Try the Demo</button>
+                </a>
+
+                </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+     <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">Data Quality Demo</h5>
+        <div class="card border-light text-light bg-dark">
+          <img src="images/data_quality.png" class="card-img-top" alt="data_quality_preview">
+          <div class="card-body">
+            <h5 class="card-title">Data Quality<span class="badge-live">Live</span></h5>
+            <p class="card-text">A data-quality view that measures missing values, repeated landmark names and barangay coverage, and can be filtered by city or barangay. It runs on PostGIS aggregates and spatial filters behind a Django REST API.</em></p>
+            <div class="learnmore">
+                <a href="https://geodjango-leaflet-search.onrender.com/maps/quality/" target="_blank" rel="noopener">
+                    <button class="shrink-border">Try the Demo</button>
+                </a>
+
+                </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+
+</div>
+
+<!-- p2 -->
+<div class="row row-cols-2 row-cols-md-5 g-4">
+
+    <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">Hotspot Cluster Demo <br> </h5>
+        <div class="card border-light text-light bg-dark">
+          <img src="images/hotspot.png" class="card-img-top" alt="hotspot_cluster_preview">
+          <div class="card-body">
+            <h5 class="card-title">Hotspot Cluster <span class="badge-live">Live</span></h5>
+            <p class="card-text">Detects hotspots of landmarks or house numbers using DBSCAN clustering in PostGIS (ST_ClusterDBSCAN) and outlines each cluster with its size, density and barangay. The neighbor distance and minimum cluster size are adjustable.</em></p>
+            <div class="learnmore">
+                <a href="http://localhost:8000/maps/clusters/" target="_blank">
+                <button class="shrink-border">Try the Demo</button>
+            <!-- </a>
+                <a href="https://github.com/bruskomars/bruskomars.github.io/tree/main/branch-finder-api" target="_blank">
+                <button class="shrink-border">View Code</button>
+            </a> -->
+            </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">Compare Areas Demo</h5>
+        <div class="card border-light text-light bg-dark">
+          <img src="images/comparison.png" class="card-img-top" alt="compare_areas_preview">
+          <div class="card-body">
+            <h5 class="card-title">Compare Areas<span class="badge-live">Live</span></h5>
+            <p class="card-text">Compares two cities or barangays side by side, covering area, counts, densities and landmark categories per km², and outlines both on the map.</em></p>
+            <div class="learnmore">
+                <a href="https://geodjango-leaflet-search.onrender.com/maps/compare/" target="_blank" rel="noopener">
+                    <button class="shrink-border">Try the Demo</button>
+                </a>
+
+                </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+     <div class="col">
+        <h5 class="card-title" style="color:beige;font-size:2.5rem">Name Analysis Demo</h5>
+        <div class="card border-light text-light bg-dark">
+          <img src="images/landmark.png" class="card-img-top" alt="landmark_analysis_preview">
+          <div class="card-body">
+            <h5 class="card-title">Landmark Name Analysis<span class="badge-live">Live</span></h5>
+            <p class="card-text">Text analysis of landmark names that groups them into categories such as schools, churches and food outlets, surfaces chain names that repeat across branches, and plots any selection on the map. It uses SQL regular expressions and word-frequency queries.</em></p>
+            <div class="learnmore">
+                <a href="https://geodjango-leaflet-search.onrender.com/maps/names/" target="_blank" rel="noopener">
+                    <button class="shrink-border">Try the Demo</button>
+                </a>
+
+                </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
 </div>
 
  
