@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- same stylesheets as index.html so nav, headings and buttons match -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="learnmorebtn.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap" rel="stylesheet">
+    <title>Certifications | Mars Alexis Regidor GIS Portfolio</title>
+    <style>
+        .cert-wrap { width: 100%; box-sizing: border-box; max-width: 1200px; margin: 0 auto; padding: 0 20px 60px; }
+        /* style.css sets max-width: fit-content on html/body, which shrinks this page to its content width */
+        html, body { max-width: none; }
+        body { background-color: #27333a; }
+        .cert-hero { width: 100%; box-sizing: border-box; padding: 150px 20px 60px; margin-bottom: 30px; text-align: center; background: url("images/bg2.png") center / cover no-repeat; }
+        .cert-hero h1 { font-family: "Lobster", cursive; font-size: 64px; color: #fff; margin: 0 0 10px; text-shadow: 0 0 12px rgba(160,240,210,.6); }
+        .cert-hero p { color: beige; font-size: 20px; margin: 0; }
+        .cert-intro { color: #ccc; text-align: center; max-width: 680px; margin: 0 auto 28px; font-family: 'Spectral', serif; font-size: 18px; }
+        .cert-filters { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 34px; }
+        .cert-filters button { background: transparent; color: beige; border: 1px solid rgba(245,245,220,.45); border-radius: 25px; padding: 8px 20px; cursor: pointer; transition: background .2s, color .2s; }
+        .cert-filters button:hover, .cert-filters button:focus-visible { background: rgba(245,245,220,.15); outline: none; }
+        .cert-filters button.active { background: rgba(234,252,156,.95); color: #222; border-color: transparent; }
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 26px; }
+        .cert-card { display: flex; flex-direction: column; }
+        .cert-card .thumb { height: 200px; background: #2b2f33; display: flex; align-items: center; justify-content: center; color: #888; cursor: zoom-in; overflow: hidden; border-radius: 4px 4px 0 0; }
+        .cert-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .cert-card .card-body { display: flex; flex-direction: column; flex: 1; }
+        .cert-meta { color: rgba(234,252,156,.95); font-size: 14px; margin-bottom: 10px; }
+        .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+        .chip { font-size: 12px; padding: 3px 12px; border-radius: 25px; background: rgba(73,84,90,.5); color: rgba(255,174,205,.98); }
+        .applied { font-size: 14px; color: #ccc; margin-bottom: 14px; }
+        .applied a { color: beige; text-decoration: underline; }
+        .cert-card .learnmore { margin-top: auto; }
+        .cert-empty { color: #aaa; text-align: center; display: none; }
+        .back { text-align: center; margin-top: 40px; }
+        #lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.88); display: none; align-items: center; justify-content: center; z-index: 9999; cursor: zoom-out; padding: 20px; }
+        #lightbox.open { display: flex; }
+        #lightbox img { max-width: 100%; max-height: 100%; }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo"><a href="index.html">Home</a></div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="projects/files/mycv2026.pdf">Resume</a></li>
+                    <li><a href="https://github.com/bruskomars?tab=repositories">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/marsregidor/">Linkedin</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger"><i></i><i></i><i></i></span>
+        </div>
+    </nav>
+
+    <header class="cert-hero">
+        <h1>Certifications</h1>
+        <p>Bootcamps and courses</p>
+    </header>
+
+    <div class="cert-wrap">
+        <p class="cert-intro">Courses I completed to deepen my GIS, web mapping, programming, data analysis and data skills. Where a course shaped something I built, the card links to that work.</p>
+        <div class="cert-filters" id="filters" role="group" aria-label="Filter certificates by topic"></div>
+        <div class="cert-grid" id="grid"></div>
+        <p class="cert-empty" id="empty">No certificates in this topic yet.</p>
+        <div class="back"><a href="index.html" class="learnmore"><button class="shrink-border">Back to Portfolio</button></a></div>
+    </div>
+
+    <div id="lightbox" role="dialog" aria-label="Certificate preview"><img alt=""></div>
+
+    <script>
+    /* ===== EDIT THIS LIST ONLY =====
+       title, instructor, date, hours, category (used for the filter buttons),
+       skills (chips), url (Udemy certificate link), image (certificate picture in /images/certs/),
+       applied (optional: which of your projects used it) */
+    const CERTS = [
+        {
+            title: "Introduction to web programming for GIS applications",
+            instructor: "Michael Miller",
+            date: "May 2026",
+            hours: 14.5,
+            category: "Web GIS",
+            skills: ["Web Mapping", "GIS", "PostGIS", "Web Development"],
+            url: "https://www.udemy.com/certificate/UC-507d686f-d3d8-4f4c-b257-00252dc16cfd/",
+            image: "images/certs/webgis.jpg",
+            // applied: { label: "Branch Finder demo", url: "demo/branch-finder/" }
+        },
+        {
+            title: "Python for GIS Automation and Geospatial Applications",
+            instructor: "Prof Azad Rasul",
+            date: "Jun 2026",
+            hours: 5,
+            category: "GIS",
+            skills: ["ArcPy", "PyQGIS", "GIS", "Python"],
+            url: "https://www.udemy.com/certificate/UC-96a73591-e081-439f-9488-3cebb657d833/",
+            image: "images/certs/gis-auto.jpg",
+            // applied: { label: "NCR Layer Search", url: "https://geodjango-leaflet-search.onrender.com/maps/" }
+        },
+        {
+            title: "Leaflet From Scratch With A GeoDjango Project",
+            instructor: "Ikrom Nishanbaev",
+            date: "Mar 2025",
+            hours: 17.5,
+            category: "Web GIS",
+            skills: ["Leaflet", "GIS", "Web Mapping", "Geo Django", "PostGIS"],
+            url: "https://www.udemy.com/certificate/UC-8087f6dd-c7d5-49b4-b5fa-13bb2743bc97/",
+            image: "images/certs/leaflet.jpg"
+        },
+        {
+            title: "SQL for Data Analysis, Hands-on industry skills for analysts",
+            instructor: "Imran R",
+            date: "Aug 2025",
+            hours: 7.5,
+            category: "SQL",
+            skills: ["PostgreSQL", "SQL", "Data Analysis"],
+            url: "https://www.udemy.com/certificate/UC-aa8adc18-ba1f-47d6-a612-fc986c18c3d5/",
+            image: "images/certs/sql.jpg"
+        },
+        {
+            title: "Master Pandas: Basics To Advanced - To Become A Data Analyst",
+            instructor: "Pruthviraja L",
+            date: "Aug 2025",
+            hours: 15.45,
+            category: "Data Analysis",
+            skills: ["Pandas", "Python", "Data Analysis"],
+            url: "https://www.udemy.com/certificate/UC-e3441a56-a77a-48ae-a292-001fc891f27a/",
+            image: "images/certs/data_analysis.jpg"
+        },
+        {
+            title: "Python for Data Science and Machine Learning Bootcamp",
+            instructor: "Jose Portilla",
+            date: "Mar 2025",
+            hours: 25,
+            category: "Data Science",
+            skills: ["Data Preparation", "Machine Learning", "Data Analysis"],
+            url: "https://www.udemy.com/certificate/UC-eb3b9510-1948-4c37-8aa5-5d23a14e51a6/",
+            image: "images/certs/ml.jpg"
+        },
+        {
+            title: "Python 3: Deep Dive (Part 3 - Dictionaries, Sets, JSON)",
+            instructor: "Dr. Fred Baptiste",
+            date: "Oct 2024",
+            hours: 22,
+            category: "Python",
+            skills: ["Python", "Programming Language", "Development"],
+            url: "https://www.udemy.com/certificate/UC-a53a97bf-0d79-4d47-a730-268f3d8942e5/",
+            image: "images/certs/py.jpg"
+        },
+        {
+            title: "Python 3: Deep Dive (Part 2 - Iterators, Generators)",
+            instructor: "Dr. Fred Baptiste",
+            date: "Sep 2024",
+            hours: 36,
+            category: "Python",
+            skills: ["Python", "Programming Language", "Development"],
+            url: "https://www.udemy.com/certificate/UC-fbcda584-a1fb-4188-8f7a-900228351b48/",
+            image: "images/certs/py.jpg"
+        },
+        {
+            title: "Python 3: Deep Dive (Part 1 - Functional)",
+            instructor: "Dr. Fred Baptiste",
+            date: "Jun 2024",
+            hours: 46,
+            category: "Python",
+            skills: ["Python", "Programming Language", "Development"],
+            url: "https://www.udemy.com/certificate/UC-6a8a8843-1336-462e-ae96-b5452ecdd60e/",
+            image: "images/certs/py.jpg"
+        },
+        {
+            title: "The Ultimate Flask Course",
+            instructor: "Anthony Herbert",
+            date: "Nov 2024",
+            hours: 28.5,
+            category: "Python",
+            skills: ["Python", "Flask", "Development"],
+            url: "https://www.udemy.com/certificate/UC-103910bb-d4f1-4400-afbb-fd3fc0706205/",
+            image: "images/certs/flask.jpg"
+        },
+        {
+            title: "Web Scraping in Python Selenium, Scrapy + ChatGPT Prize",
+            instructor: "Frank Andrade",
+            date: "Jun 2023",
+            hours: 10,
+            category: "Python",
+            skills: ["Python", "Web Scraping", "Development"],
+            url: "https://www.udemy.com/certificate/UC-cf7ce531-74bd-429e-85ce-ebbde5c6c859/",
+            image: "images/certs/py2.jpg"
+        },
+        {
+            title: "Python Django - Build Complex MultiVendor Ecommerce System",
+            instructor: "Rathan Kumar",
+            date: "Jan 2024",
+            hours: 42,
+            category: "Python",
+            skills: ["Python", "Django", "Development"],
+            url: "https://www.udemy.com/certificate/UC-71040e84-c107-4856-ab0a-2ce883e8e55d/",
+            image: "images/certs/py3.jpg"
+        },
+        {
+            title: "100 Days of Code™: The Complete Python Pro Bootcamp",
+            instructor: "Dr. Angela Yu",
+            date: "Oct 2022",
+            hours: 64,
+            category: "Python",
+            skills: ["Python", "Data Science", "Flask", "Web Scraping"],
+            url: "https://www.udemy.com/certificate/UC-c39bdc1b-cb5d-4329-ba5e-907dfc3c8039/",
+            image: "images/certs/py4.jpg"
+        },
+        {
+            title: "ArcGIS Mega Course: Basic to Advanced GIS, RS & Python",
+            instructor: "MD Shahriar Alam",
+            date: "Sep 2025",
+            hours: 6,
+            category: "GIS",
+            skills: ["ArcGIS", "GIS", "Python"],
+            url: "https://www.udemy.com/certificate/UC-4781f6a7-e03f-41de-a3f8-b461f8d3cc03/",
+            image: "images/certs/gis.jpg"
+        },
+        {
+            title: "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert",
+            instructor: "Colt Steele",
+            date: "May 2023",
+            hours: 37.5,
+            category: "SQL",
+            skills: ["SQL", "Database", "MySQL"],
+            url: "https://www.udemy.com/certificate/UC-70935252-0aab-4130-a827-331322e1b1ca/",
+            image: "images/certs/sql2.jpg"
+        },
+        {
+            title: "The Web Developer Bootcamp 2023",
+            instructor: "Colt Steele",
+            date: "Mar 2023",
+            hours: 64,
+            category: "Web Development",
+            skills: ["Web Development", "Development", "CSS", "Javascript"],
+            url: "https://www.udemy.com/certificate/UC-dde3987b-acbe-4272-9a07-cc527bf56723/",
+            image: "images/certs/webdev.jpg"
+        },
+        {
+            title: "Django Masterclass: Build 9 Real World Django Projects",
+            instructor: "Ashutosh Pawar",
+            date: "Mar 2025",
+            hours: 34,
+            category: "Web Development",
+            skills: ["Django", "Web Development", "Python"],
+            url: "https://www.udemy.com/certificate/UC-4c40df70-42bd-4c8c-ba0d-144c6e13abb2/",
+            image: "images/certs/py5.jpg"
+        },
+        {
+            title: "PostgreSQL and MS SQL for Beginners",
+            instructor: "Start-Tech Academy",
+            date: "Aug 2025",
+            hours: 9.5,
+            category: "SQL",
+            skills: ["Data Analysis", "SQL", "Database Design & Development"],
+            url: "https://www.udemy.com/certificate/UC-9a23c9f6-2d81-408d-a377-2236eb0fee9b/",
+            image: "images/certs/sql3.jpg"
+        },
+        {
+            title: "Machine Learning using Python",
+            instructor: "Start-Tech Academy",
+            date: "May 2025",
+            hours: 19,
+            category: "Data Science",
+            skills: ["Machine Learning", "Python", "Data Analysis"],
+            url: "https://www.udemy.com/certificate/UC-65a86d0f-a9df-41e1-9468-b2926d3f3a02/",
+            image: "images/certs/ml1.jpg"
+        },
+        {
+            title: "Complete Data Analyst Bootcamp From Basics To Advanced",
+            instructor: "Krish Naik",
+            date: "July 2025",
+            hours: 84.5,
+            category: "Data Analysis",
+            skills: ["Power BI", "SQL", "Python", "Data Analysis"],
+            url: "https://www.udemy.com/certificate/UC-85a642de-7b71-4b2a-8a27-4a6a0943c6ee/",
+            image: "images/certs/da1.jpg"
+        },
+        {
+            title: "[NEW] PL-300: Microsoft Power BI Data Analyst Associate 2026",
+            instructor: "Amandeep Sawhney | HawkEye Data",
+            date: "Aug 2026",
+            hours: 27,
+            category: "Data Analysis",
+            skills: ["Power BI", "Data Analysis"],
+            url: "https://www.udemy.com/certificate/UC-2d8ffb6e-8882-4fa8-8444-03bb696d423d/",
+            image: "images/certs/da2.jpg"
+        },
+    ];
+
+    const grid = document.getElementById('grid');
+    const filters = document.getElementById('filters');
+    const empty = document.getElementById('empty');
+    const box = document.getElementById('lightbox');
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+    function card(c) {
+        const applied = c.applied
+            ? `<p class="applied">Applied in: <a href="${esc(c.applied.url)}" target="_blank" rel="noopener">${esc(c.applied.label)}</a></p>` : '';
+        return `<div class="card border-light text-light bg-dark cert-card" data-cat="${esc(c.category)}">
+            <div class="thumb" data-img="${esc(c.image)}" tabindex="0" role="button" aria-label="Enlarge certificate: ${esc(c.title)}">
+                <img src="${esc(c.image)}" alt="Certificate: ${esc(c.title)}" loading="lazy" onerror="this.replaceWith(document.createTextNode('Certificate image'))">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">${esc(c.title)}</h5>
+                <p class="cert-meta">Udemy · ${esc(c.instructor)} · ${esc(c.date)} · ${esc(c.hours)} hours</p>
+                <div class="chips">${c.skills.map(s => `<span class="chip">${esc(s)}</span>`).join('')}</div>
+                ${applied}
+                <div class="learnmore"><a href="${esc(c.url)}" target="_blank" rel="noopener"><button class="shrink-border">View Credential</button></a></div>
+            </div>
+        </div>`;
+    }
+
+    grid.innerHTML = CERTS.map(card).join('');
+    const cats = ['All', ...new Set(CERTS.map(c => c.category))];
+    filters.innerHTML = cats.map((c, i) => `<button type="button" data-cat="${esc(c)}" class="${i ? '' : 'active'}">${esc(c)}</button>`).join('');
+
+    filters.addEventListener('click', e => {
+        const b = e.target.closest('button'); if (!b) return;
+        filters.querySelectorAll('button').forEach(x => x.classList.toggle('active', x === b));
+        let shown = 0;
+        grid.querySelectorAll('.cert-card').forEach(el => {
+            const on = b.dataset.cat === 'All' || el.dataset.cat === b.dataset.cat;
+            el.style.display = on ? '' : 'none'; if (on) shown++;
+        });
+        empty.style.display = shown ? 'none' : 'block';
+    });
+
+    function openBox(src) { box.querySelector('img').src = src; box.classList.add('open'); }
+    grid.addEventListener('click', e => { const t = e.target.closest('.thumb'); if (t) openBox(t.dataset.img); });
+    grid.addEventListener('keydown', e => { const t = e.target.closest('.thumb'); if (t && e.key === 'Enter') openBox(t.dataset.img); });
+    box.addEventListener('click', () => box.classList.remove('open'));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') box.classList.remove('open'); });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        $(window).scroll(function () { $('.nav').toggleClass('affix', $(document).scrollTop() > 50); });
+    </script>
+</body>
+</html>
